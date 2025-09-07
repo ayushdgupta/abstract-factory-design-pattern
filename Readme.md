@@ -1,13 +1,12 @@
 https://www.geeksforgeeks.org/system-design/abstract-factory-pattern/
 
 Another good example
-
+```
 // 1. Abstract Product
-'''
 interface Button {
     void paint();
 }
-'''
+```
 
 // 2. Concrete Products
 class WindowsButton implements Button {
