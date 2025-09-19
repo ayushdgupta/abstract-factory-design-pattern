@@ -1,18 +1,18 @@
-import abstractFactory.CarFactory;
-import concreteFactory.IndianCarFactory;
-import concreteFactory.USCarFactory;
+
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
 
-        CarFactory indianCar = new IndianCarFactory();
-        indianCar.createCar().assemble();
-        indianCar.createSpecification().printSpecification();
+        ShapeFactory roundShapeFactory = ShapeFactoryProducer.getShapeFactory(true);
+        ShapeFactory normalShapeFactory = ShapeFactoryProducer.getShapeFactory(false);
 
-        CarFactory USCar = new USCarFactory();
-        USCar.createCar().assemble();
-        USCar.createSpecification().printSpecification();
+        Shape roundRectangleShape = roundShapeFactory.getShape(ShapeConstants.ROUNDED_RECTANGLE);
+        roundRectangleShape.draw();
+
+        Shape normalRectangleShape = normalShapeFactory.getShape(ShapeConstants.RECTANGLE);
+        normalRectangleShape.draw();
+
     }
 }

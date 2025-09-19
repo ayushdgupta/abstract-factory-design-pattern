@@ -1,2 +1,1 @@
-https://www.geeksforgeeks.org/system-design/abstract-factory-pattern/
-
+https://www.tutorialspoint.com/design_pattern/abstract_factory_pattern.htm
